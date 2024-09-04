@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocketpay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <style>
+        * {
+            font-family: Urbanist;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <!-- <nav class="p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="font-[18px] font-normal">Home</a>
+                <a href="#" class="font-[18px] font-normal">Services</a>
+                <a href="#" class="font-[18px] font-normal">Pricing</a>
+                <a href="about.html" class="font-[18px] font-normal">About Us</a>
+                <a href="contact.html" class="font-[18px] font-normal">Contuct</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Log In</p>
+                    </a>
+                </div>
+                <div id="regi" class="bg-[#0666EB] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-[#E6F0FD] inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="" class="">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="#" class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="#" class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contuct</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- <nav class="fixed top-0 left-0 right-0 z-50 p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="Logo" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="text-[18px] font-normal hover:text-[#0666EB]">Home</a>
+                <a href="#" class="text-[18px] font-normal hover:text-[#0666EB]">Services</a>
+                <a href="#" class="text-[18px] font-normal hover:text-[#0666EB]">Pricing</a>
+                <a href="about.html" class="text-[18px] font-normal hover:text-[#0666EB]">About Us</a>
+                <a href="contact.html" class="text-[18px] font-normal hover:text-[#0666EB]">Contact</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold hover:text-[#1A78F0]">Log In</p>
+                    </a>
+                </div>
+                <div id="regi" class="bg-[#0666EB] hover:bg-[#1A78F0] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-50 md:hidden bg-[#E6F0FD] inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contact</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14 transition-colors duration-300 ease-in-out">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="Logo" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="text-[18px] font-normal hover:text-[#0666EB]">Home</a>
+                <a href="services.html" class="text-[18px] font-normal hover:text-[#0666EB]">Services</a>
+                <a href="pricing.html" class="text-[18px] font-normal hover:text-[#0666EB]">Pricing</a>
+                <a href="about.html" class="text-[18px] font-normal hover:text-[#0666EB]">About Us</a>
+                <a href="contact.html" class="text-[18px] font-normal hover:text-[#0666EB]">Contact</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="login.html">
+                        <p class="text-[14px] font-semibold hover:text-[#1A78F0]">Log In</p>
+                    </a>
+                </div>
+                <div id="regi"
+                    class="bg-[#0666EB] hover:bg-[#1A78F0] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="regi.html">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-50 md:hidden bg-white inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="services.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="pricing.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contact</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="login.html">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="regi.html">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero-section" class="flex items-center bg-white justify-center pt-[100px] pb-16 lg:px-14 md:px-3">
+        <div class="container grid lg:grid-cols-2 grid-cols-1 gap-6 items-center md:m-0 m-3">
+            <div id="text">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945]">What is Pocketpay</h1>
+                <p class="text-[18px] font-medium text-[#181945] leading-[28px] opacity-60 mt-6">Pocketpay is committed
+                    to revolutionizing the way you handle your payments. With a focus on convenience, security, and
+                    innovation, we offer a range of services that make transactions faster and easier.</p>
+            </div>
+            <div id="img">
+                <img src="img/about.jpeg" alt="About Pocketpay" class="w-full h-full rounded-xl">
+            </div>
+        </div>
+    </section>
+    <div class=" min-h- container my-2"> </div>
+    <!-- Our Mission Section -->
+    <section id="mission" class="flex justify-center py-16 lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid lg:grid-cols-2 gap-6 items-center">
+            <div id="img" class="wow animate__animated animate__zoomIn" data-aos="flip-left" data-aos-duration="2000" data-aos-once=“true”>
+                <img src="img/ourMisson.jpeg" alt="Our Mission" class="w-full h-full rounded-xl">
+            </div>
+            <div id="text" data-aos="fade-down" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="1000" data-aos-once=“true”>
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] wow animate__animated animate__lightSpeedInRight">Our Mission</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60 wow animate__animated animate__fadeInRight">At Pocketpay, our mission is to empower
+                    businesses and individuals with the tools they need to succeed in the digital economy. We strive to
+                    make financial transactions seamless, secure, and accessible to everyone, everywhere.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Our Team Section -->
+    <section id="team" class="bg-[#E6F0FD] flex justify-center py-10 lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3">
+            <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] mb-8 wow animate__animated animate__fadeInLeft">Meet the Team</h1>
+            <div class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-2xl p-6 wow animate__animated animate__fadeInUp" data-aos="fade-right" data-aos-duration="1500">
+                    <img src="img/user.webp" alt="Team Member" class="rounded-full w-32 h-32 mx-auto">
+                    <h4 class="text-xl font-semibold text-[#383940] mt-6 text-center">John Doe</h4>
+                    <p class="text-sm font-medium text-[#181945] opacity-60 text-center">CEO & Founder</p>
+                </div>
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-2xl p-6 wow animate__animated animate__fadeInUp" data-aos="fade-right" data-aos-duration="1500"
+                    data-aos-delay="400">
+                    <img src="img/user.webp" alt="Team Member" class="rounded-full w-32 h-32 mx-auto">
+                    <h4 class="text-xl font-semibold text-[#383940] mt-6 text-center">Jane Smith</h4>
+                    <p class="text-sm font-medium text-[#181945] opacity-60 text-center">CTO</p>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="bg-white rounded-2xl p-6 wow animate__animated animate__fadeInUp" data-aos="fade-right" data-aos-duration="1500"
+                    data-aos-delay="600">
+                    <img src="img/user.webp" alt="Team Member" class="rounded-full w-32 h-32 mx-auto">
+                    <h4 class="text-xl font-semibold text-[#383940] mt-6 text-center">Emily Johnson</h4>
+                    <p class="text-sm font-medium text-[#181945] opacity-60 text-center">CFO</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="flex justify-center py-10 lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-2 gap-6 items-center">
+            <div id="text" data-aos="fade-down" data-aos-duration="1500">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] wow animate__animated animate__fadeInLeft">Get in Touch</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60 wow animate__animated animate__fadeInLeft">Have any questions or inquiries? We're
+                    here to help. Reach out to us, and we'll get back to you as soon as possible.</p>
+            </div>
+            <div id="form" class="bg-[#E6F0FD] p-6 rounded-xl wow animate__animated animate__fadeInRight">
+                <form action="#" data-aos="zoom-in" data-aos-duration="1500">
+                    <div class="mb-4">
+                        <!-- <label for="name" class="block text-sm font-medium text-[#383940]">Name</label> -->
+                        <input type="text" id="name" name="name" placeholder="Your Name"
+                            class="w-full border border-white p-3 rounded-lg mt-1 hover:border-[#0666EB] focus:outline-none focus:border-blue-500"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <!-- <label for="email" class="block text-sm font-medium text-[#383940]">Email</label> -->
+                        <input type="email" id="email" name="email" placeholder="name@gmail.com"
+                            class="w-full border border-white p-3 rounded-lg mt-1 hover:border-[#0666EB] focus:outline-none focus:border-blue-500"
+                            required>
+                    </div>
+                    <div class="mb-4">
+                        <!-- <label for="message" class="block text-sm font-medium text-[#383940]">Message</label> -->
+                        <textarea id="message" name="message" rows="4" placeholder="Your Text"
+                            class="w-full border border-white p-3 rounded-lg mt-1 hover:border-[#0666EB] focus:outline-none focus:border-blue-500"
+                            required></textarea>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-[#0666EB] text-white font-semibold py-3 rounded-lg hover:bg-[#0666EB]">Send
+                        Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="flex justify-center sm:pt-[100px] pt-8 bg-[#032B63] sm:pb-[40px] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div>
+                <img src="img/logo-w.svg" alt="">
+                <p class="text-base font-normal mt-6 text-white leading-6 w-[70%]">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </p>
+                <div id="icons" class="grid grid-cols-7 gap-5 mt-9">
+                    <a href="#"><img src="img/insta.svg" alt=""></a>
+                    <a href="#"><img src="img/x.svg" alt=""></a>
+                    <a href="#"><img src="img/fb.svg" alt=""></a>
+                    <a href="#"><img src="img/youtube.svg" alt=""></a>
+                </div>
+
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Jump To</h4>
+                <a href="index.html">
+                    <p class="text-base font-normal mt-6">Home</p>
+                </a>
+                <a href="services.html">
+                    <p class="text-base font-normal mt-3">Services</p>
+                </a>
+                <a href="pricing.html">
+                    <p class="text-base font-normal mt-3">Pricing</p>
+                </a>
+                <a href="about.html">
+                    <p class="text-base font-normal mt-3">About us</p>
+                </a>
+                <a href="contact.html">
+                    <p class="text-base font-normal mt-3">Contact</p>
+                </a>
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Legal</h4>
+                <a href="privacyPolicy.html">
+                    <p class="text-base font-normal mt-6">Privacy Policy</p>
+                </a>
+                <a href="terms.html">
+                    <p class="text-base font-normal mt-3">Terms of Use</p>
+                </a>
+                <a href="blog.html">
+                    <p class="text-base font-normal mt-3">Blog</p>
+                </a>
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Contact Us</h4>
+
+                <div class="flex gap-4 mt-6">
+                    <img src="img/map-pin.svg" alt="">
+                    <p class="text-base font-normal">1234, South Avenue</p>
+                </div>
+                <div class="flex gap-4 mt-3">
+                    <img src="img/phone-call.svg" alt="">
+                    <p class="text-base font-normal">+01234 567 890</p>
+                </div>
+                <p class="flex gap-4 mt-6">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="lg:w-[112px] md:w-[80px] w-[90px]">
+                    <img src="img/appstore.png" alt="" class="lg:w-[112px] md:w-[80px] w-[90px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <Script src="js/wow.min.js"></Script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

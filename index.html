@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocketpay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <style>
+        * {
+            font-family: Urbanist;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <nav class="p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="text-[18px] font-normal">Home</a>
+                <a href="#" class="text-[18px] font-normal">Services</a>
+                <a href="#" class="text-[18px] font-normal">Pricing</a>
+                <a href="about.html" class="text-[18px] font-normal">About Us</a>
+                <a href="contact.html" class="text-[18px] font-normal">Contuct</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Log In</p>
+                    </a>
+                </div>
+                <div id="regi" class="bg-[#0666EB] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog"
+                class="hidden fixed z-10 md:hidden bg-[#E6F0FD] inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="" class="">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contuct</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- <nav class="fixed top-0 left-0 right-0 z-50 p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="Logo" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="text-[18px] font-normal hover:text-[#0666EB]">Home</a>
+                <a href="#" class="text-[18px] font-normal hover:text-[#0666EB]">Services</a>
+                <a href="#" class="text-[18px] font-normal hover:text-[#0666EB]">Pricing</a>
+                <a href="about.html" class="text-[18px] font-normal hover:text-[#0666EB]">About Us</a>
+                <a href="contact.html" class="text-[18px] font-normal hover:text-[#0666EB]">Contact</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold hover:text-[#1A78F0]">Log In</p>
+                    </a>
+                </div>
+                <div id="regi"
+                    class="bg-[#0666EB] hover:bg-[#1A78F0] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-50 md:hidden bg-[#E6F0FD] inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contact</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14 transition-colors duration-300 ease-in-out">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="Logo" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="text-[18px] font-normal hover:text-[#0666EB]">Home</a>
+                <a href="services.html" class="text-[18px] font-normal hover:text-[#0666EB]">Services</a>
+                <a href="pricing.html" class="text-[18px] font-normal hover:text-[#0666EB]">Pricing</a>
+                <a href="about.html" class="text-[18px] font-normal hover:text-[#0666EB]">About Us</a>
+                <a href="contact.html" class="text-[18px] font-normal hover:text-[#0666EB]">Contact</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="login.html">
+                        <p class="text-[14px] font-semibold hover:text-[#1A78F0]">Log In</p>
+                    </a>
+                </div>
+                <div id="regi"
+                    class="bg-[#0666EB] hover:bg-[#1A78F0] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="regi.html">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-50 md:hidden bg-white inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="services.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="pricing.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contact</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="login.html">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="regi.html">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- <section id="hero-section"
+        class="bg-[#E6F0FD] flex items-center justify-center pt-[100px] pb-[80px] lg:px-14 md:px-3">
+        <div
+            class="container bg-white rounded-[36px] grid lg:grid-cols-2 grid-cols-1 gap-6 overflow-hidden items-center md:m-0 m-3 md:px-[80px] md:py-[60px] px-[20px] py-[20px]">
+            <div id="text" class="" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="1000">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] lg:w-[70%]">Quick,
+                    Easy, and Safe Payments</h1>
+                <p class="text-[18px] font-medium text-[#181945] leading-[28px] opacity-60 mt-6 lg:w-[79%]">Make
+                    payments in-store or online, plus send money to any bank account in a flash directly from your
+                    bank account.
+                </p>
+
+                <div class="flex items-center gap-1 mt-7 ">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">Swift QR scanning for instant
+                        payments at lightspeed.</p>
+                </div>
+                <div class="flex items-center gap-1 my-4">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">24/7 money transfers to anyone,
+                        anytime</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">100% safe & secure</p>
+                </div>
+                <p class="text-[18px] font-normal text-[#858799] mt-7   ">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                    <img src="img/appstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                </div>
+            </div>
+            <div id="img" class="" data-aos="zoom-in" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="1000">
+                <img src="img/hero-img.png" alt="" class="w-full h-full">
+            </div>
+        </div>
+    </section> -->
+
+    <section id="hero-section"
+        class="bg-[#E6F0FD] flex items-center justify-center pt-[100px] pb-[80px] lg:px-14 md:px-3">
+        <div
+            class="container bg-white rounded-[36px] grid lg:grid-cols-2 grid-cols-1 gap-6 overflow-hidden items-center md:m-0 m-3 md:px-[80px] md:py-[60px] px-[20px] py-[20px] ">
+            <div id="text" class="wow animate__animated animate__fadeInLeft">
+                <h1
+                    class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] lg:w-[70%] ">
+                    Quick,
+                    Easy, and Safe Payments</h1>
+                <p class="text-[18px] font-medium text-[#181945] leading-[28px] opacity-60 mt-6 lg:w-[79%]"
+                    data-aos="fade-left" data-aos-duration="1500" data-aos-delay="300">Make
+                    payments in-store or online, plus send money to any bank account in a flash directly from your
+                    bank account.
+                </p>
+
+                <div class="flex items-center gap-1 mt-7 " >
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">Swift QR scanning for instant
+                        payments at lightspeed.</p>
+                </div>
+                <div class="flex items-center gap-1 my-4 ">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">24/7 money transfers to anyone,
+                        anytime</p>
+                </div>
+                <div class="flex items-center gap-1 ">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">100% safe & secure</p>
+                </div>
+                <p class="text-[18px] font-normal text-[#858799] mt-7">
+                    Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                    <img src="img/appstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                </div>
+            </div>
+            <div id="img" class="wow animate__animated animate__fadeInRight">
+                <img src="img/hero-img.png" alt="" class="w-full h-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="recharges" class="flex justify-center bg-[#E6F0FD] pb-10 lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3">
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945]">Recharges & Bill Payments</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60">Enjoy fast payments on every recharge &
+                    bill
+                    payment</p>
+            </div>
+            <div class="grid lg:grid-cols-7 md:grid-cols-3 grid-cols-2 gap-9 mt-9">
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl" data-aos="zoom-in"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500">
+                    <img src="img/mobile.svg" alt="" class="">
+                    <p class="text-sm font-semibold mt-6">Mobile Recharge</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl" data-aos="zoom-in"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="200">
+                    <img src="img/bulb.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Electricity Bill</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl" data-aos="zoom-in"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="400">
+                    <img src="img/DTH Recharge.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">DTH Recharge</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl" data-aos="zoom-in"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="600">
+                    <img src="img/mobile.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Mobile Postpaid</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl" data-aos="zoom-in"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="700">
+                    <img src="img/FASTag.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">FASTag</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl" data-aos="zoom-in"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="800">
+                    <img src="img/Buy Insurance.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Buy Insurance</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl" data-aos="zoom-in"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="500" data-aos-delay="1000">
+                    <img src="img/Investment.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Investment</p>
+                </div>
+            </div>
+            <button
+                class="flex items-center bg-[#0666EB] max-w-max mx-auto mt-9 py-3 px-4 rounded-full hover:bg-[#1A78F0]"
+                data-aos="fade-up" data-aos-duration="1000">
+                <p class="text-white text-sm font-semibold ">View All</p>
+                <img src="img/arrow-narrow-right.svg" alt="">
+            </button>
+        </div>
+    </section> -->
+
+    <section id="recharges" class="flex justify-center bg-[#E6F0FD] pb-10 lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3">
+            <div class="wow animate__animated animate__fadeInLeft">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945]">Recharges & Bill Payments</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60 ">Enjoy fast payments on every recharge &
+                    bill payment</p>
+            </div>
+            <div class="grid lg:grid-cols-7 md:grid-cols-3 grid-cols-2 gap-9 mt-9">
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl wow animate__animated animate__zoomIn">
+                    <img src="img/mobile.svg" alt="" class="">
+                    <p class="text-sm font-semibold mt-6">Mobile Recharge</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl wow animate__animated animate__zoomIn">
+                    <img src="img/bulb.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Electricity Bill</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl wow animate__animated animate__zoomIn">
+                    <img src="img/DTH Recharge.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">DTH Recharge</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl wow animate__animated animate__zoomIn">
+                    <img src="img/mobile.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Mobile Postpaid</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl wow animate__animated animate__zoomIn">
+                    <img src="img/FASTag.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">FASTag</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl wow animate__animated animate__zoomIn">
+                    <img src="img/Buy Insurance.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Buy Insurance</p>
+                </div>
+                <div class="flex flex-col items-center py-6 bg-white gap-3 rounded-2xl wow animate__animated animate__zoomIn">
+                    <img src="img/Investment.svg" alt="">
+                    <p class="text-sm font-semibold mt-6">Investment</p>
+                </div>
+            </div>
+            <button
+                class="flex items-center bg-[#0666EB] max-w-max mx-auto mt-9 py-3 px-4 rounded-full hover:bg-[#1A78F0] wow animate__animated animate__zoomIn"
+                data-aos="zoom-in" data-aos-duration="1000">
+                <p class="text-white text-sm font-semibold ">View All</p>
+                <img src="img/arrow-narrow-right.svg" alt="">
+            </button>
+        </div>
+    </section>
+
+
+    <!-- <section id="deatil" class="flex justify-center py-10 lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-2 items-center">
+            <div id="text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="600">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] lg:w-[50%] md:w-[50%]">Appointments
+                    made easy.</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60">Streamline your schedule with our
+                    user-friendly app, making appointments effortlessly accessible and hassle-free. Enjoy the
+                    convenience of
+                    seamless booking and efficient management for a stress-free experience.
+                </p>
+            </div>
+            <div id="img" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="img/appointment.png" alt="" class="w-full h-full">
+            </div>
+        </div>
+    </section> -->
+
+    <section id="detail" class="flex justify-center py-10 lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-2 items-center">
+            <div id="text" class="wow animate__animated animate__fadeInLeft">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] lg:w-[50%] md:w-[50%]">Appointments
+                    made easy.</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60">Streamline your schedule with our
+                    user-friendly app, making appointments effortlessly accessible and hassle-free. Enjoy the
+                    convenience of
+                    seamless booking and efficient management for a stress-free experience.
+                </p>
+            </div>
+            <div id="img" class="">
+                <img src="img/appointment.png" alt="" class="w-full h-full">
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="transactions" class="flex items-center justify-center lg:px-14 md:px-3">
+        <div
+            class="container bg-[#F8E6DE] rounded-[36px] grid lg:grid-cols-2 grid-cols-1 gap-6 overflow-hidden items-center md:m-0 m-3 md:px-[60px] md:py-[60px] px-[20px] py-[20px]">
+            <div id="img" class="" data-aos="zoom-in" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="1000">
+                <img src="img/Scan to pay-rafiki(2) 1.png" alt="" class="w-full h-full">
+            </div>
+
+            <div id="text" class="" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1000">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] lg:w-[70%]">In-store transactions
+                    empowered by Pocketpay</h1>
+                <p class="text-[18px] font-medium text-[#181945] leading-[28px] opacity-60 mt-6 lg:w-[79%]">Millions of
+                    small & big businesses use Pocketpay to accept payments anywhere any time with a wide range of
+                    solutions for all kind of merchants
+                </p>
+
+                <p class="text-[18px] font-normal text-[#858799] mt-7">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                    <img src="img/appstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="transactions" class="flex items-center justify-center lg:px-14 md:px-3">
+        <div
+            class="container bg-[#F8E6DE] rounded-[36px] grid lg:grid-cols-2 grid-cols-1 gap-6 overflow-hidden items-center md:m-0 m-3 md:px-[60px] md:py-[60px] px-[20px] py-[20px]">
+            <div id="img" class="">
+                <img src="img/Scan to pay-rafiki(2) 1.png" alt="" class="w-full h-full">
+            </div>
+
+            <div id="text" class="wow animate__animated animate__fadeInRight">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] lg:w-[70%]">In-store transactions
+                    empowered by Pocketpay</h1>
+                <p class="text-[18px] font-medium text-[#181945] leading-[28px] opacity-60 mt-6 lg:w-[79%]">Millions of
+                    small & big businesses use Pocketpay to accept payments anywhere any time with a wide range of
+                    solutions for all kinds of merchants.
+                </p>
+
+                <p class="text-[18px] font-normal text-[#858799] mt-7">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer wow animate__animated animate__flipInY">
+                    <img src="img/appstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer wow animate__animated animate__flipInY">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="bill-payments" class="flex justify-center py-[80px] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-2 items-center">
+            <div id="img" data-aos="flip-right" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="img/Vector (2).png" alt="" class="w-full h-full">
+            </div>
+            <div id="text" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"
+                data-aos-duration="1000">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945]">Recharges & Bill Payments</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60">Lightning fast payments, exciting
+                    rewards and seamless transactions on every recharge & bill payment.
+                </p>
+                <div class="flex items-center gap-1 mt-9 ">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">Unlock easy, exciting deals</p>
+                </div>
+                <div class="flex items-center gap-1 my-4">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">No hidden charges</p>
+                </div>
+                <div class="flex items-center gap-1">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">Win gifts and vouchers</p>
+                </div>
+                <p class="text-[18px] font-normal text-[#858799] mt-7   ">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                    <img src="img/appstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer">
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section id="bill-payments" class="flex justify-center py-[80px] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-2 items-center">
+            <div id="img" class=" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="1500">
+                <img src="img/Vector (2).png" alt="" class="w-full h-full">
+            </div>
+            <div id="text">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] wow animate__animated animate__fadeInUp">Recharges & Bill Payments</h1>
+                    <p class="text-lg font-medium mt-4 text-[#181945] opacity-60 wow animate__animated animate__fadeInUp">Lightning fast payments, exciting
+                        rewards and seamless transactions on every recharge & bill payment.
+                </p>
+                <div class="flex items-center gap-1 mt-9 wow animate__animated animate__fadeInUp">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">Unlock easy, exciting deals</p>
+                </div>
+                <div class="flex items-center gap-1 my-4 wow animate__animated animate__fadeInUp">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px]">No hidden charges</p>
+                </div>
+                <div class="flex items-center gap-1 wow animate__animated animate__fadeInUp">
+                    <img src="img/circle-check-filled.svg" alt="">
+                    <p class="text-[18px] font-semibold text-[#3B3E44] leading-[24px] wow animate__animated animate__fadeInUp">Win gifts and vouchers</p>
+                </div>
+                <p class="text-[18px] font-normal text-[#858799] mt-7 wow animate__animated animate__fadeInUp">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer wow animate__animated animate__flipInX">
+                    <img src="img/appstore.png" alt="" class="sm:w-[160px] sm:h-[48px] w-[45%] cursor-pointer wow animate__animated animate__flipInX">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- <section class="flex justify-center py-[80px] bg-[#E6F0FD] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3">
+            <div>
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945]" data-aos="fade-right"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800">Why Pocketpay?</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60" data-aos="fade-right"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800">We are obsessed with
+                    technology and use it
+                    extensively to solve the payments needs of your business
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 mt-9">
+                <div class="bg-white rounded-2xl p-6" data-aos="zoom-in" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-duration="800">
+                    <img src="img/flexible.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Flexible</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90] mt-4 leading-7 ">
+                        Multiple feature launches, optimizations and improvements through the year to ensure you are
+                        always ahead of the curve</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6" data-aos="zoom-in" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-duration="800" data-aos-delay="200">
+                    <img src="img/comprehensive.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Comprehensive</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90] mt-4 leading-7 ">
+                        Reduce your operational expenses using our fully managed platform that is designed for Security,
+                        Reliability and Scale </p>
+                </div>
+                <div class="bg-white rounded-2xl p-6" data-aos="zoom-in" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-duration="800" data-aos-delay="400">
+                    <img src="img/shield.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Lorem Ipsum</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90] mt-4 leading-7 ">
+                        Reduce your operational expenses using our fully managed platform that is designed for Security,
+                        Reliability and Scale</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6" data-aos="zoom-in" data-aos-offset="300"
+                    data-aos-easing="ease-in-sine" data-aos-duration="800" data-aos-delay="600">
+                    <img src="img/copy.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Lorem Ipsum</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90] mt-4 leading-7 ">
+                        Reduce your operational expenses using our fully managed platform that is designed for Security,
+                        Reliability and Scale</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="flex justify-center py-[80px] bg-[#E6F0FD] lg:px-14 md:px-3">
+        <div class="container sm:m-0 m-3">
+            <div class="wow animate__animated animate__fadeInLeft">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945]">Why Pocketpay?</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60">We are obsessed with
+                    technology and use it
+                    extensively to solve the payments needs of your business.
+                </p>
+            </div>
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 mt-9">
+                <div class="bg-white rounded-2xl p-6 wow animate__animated animate__flipInY" data-aos="flip-up" data-aos-offset="300"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="800">
+                    <img src="img/flexible.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Flexible</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90%] mt-4 leading-7 ">
+                        Multiple feature launches, optimizations, and improvements throughout the year to ensure you are
+                        always ahead of the curve.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 wow animate__animated animate__flipInY" data-aos="flip-up" data-aos-offset="300"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="800" data-aos-delay="200">
+                    <img src="img/comprehensive.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Comprehensive</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90%] mt-4 leading-7 ">
+                        Reduce your operational expenses using our fully managed platform that is designed for Security,
+                        Reliability, and Scale.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 wow animate__animated animate__flipInY" data-aos="flip-up" data-aos-offset="300"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="800" data-aos-delay="400">
+                    <img src="img/shield.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Secure</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90%] mt-4 leading-7 ">
+                        Our platform is fortified with advanced security measures to protect your transactions and
+                        sensitive data.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 wow animate__animated animate__flipInY" data-aos="flip-up" data-aos-offset="300"
+                    data-aos-easing="ease-out-cubic" data-aos-duration="800" data-aos-delay="600">
+                    <img src="img/copy.svg" alt="">
+                    <h4 class="text-2xl font-semibold text-[#383940] mt-6">Scalable</h4>
+                    <p
+                        class="text-sm font-medium text-[#181945] opacity-60 lg:w-[80%] md:w-[85%] w-[90%] mt-4 leading-7 ">
+                        Our services grow with your business, providing a scalable solution to meet your evolving needs.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faq" class="flex justify-center py-[100px] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3">
+            <h1 class="lg:text-5xl md:text-4xl text-3xl text-[#181945] font-bold mb-14 wow animate__animated animate__fadeInLeft">Frequently Asked Questions
+            </h1>
+            <div class="">
+                <button
+                    class="w-full text-left lg:text-2xl md:text-xl text-lg font-bold text-[#3B3E44] flex justify-between items-center py-2 border-b"
+                    onclick="toggleFaq(0)">
+                    Are there really zero fees?
+                    <div
+                        class="h-8 w-8 bg-[#0666EB] flex justify-center transform transition-transform rounded-full text-white ">
+
+                        <span id="icon-0" class=" ">+</span>
+                    </div>
+                </button>
+                <div id="answer-0" class="hidden">
+                    <p
+                        class="lg:text-lg md:text-base text-sm font-medium text-[#181945] opacity-60 lg:w-[70%] md:w-[80%] w-[90%] mt-2">
+                        At Pocketpay, we believe businesses shouldn't have to wait or pay to access money they've
+                        already
+                        earned. We don't charge you to sign up. We don't charge you when you receive payments. And
+                        we
+                        don't
+                        charge you when you make payments. There are zero fees. Seriously.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="lg:mt-8 md:mt-7 mt-6 ">
+                <button
+                    class="w-full text-left lg:text-2xl md:text-xl text-lg font-bold text-[#3B3E44] flex justify-between items-center py-2 border-b"
+                    onclick="toggleFaq(1)">
+                    Is Pocketpay secure?
+                    <div
+                        class="h-8 w-8 bg-[#0666EB] flex justify-center transform transition-transform rounded-full text-white ">
+
+                        <span id="icon-1" class=" ">+</span>
+                    </div>
+                </button>
+                <div id="answer-1" class="hidden">
+                    <p
+                        class="lg:text-lg md:text-base text-sm font-medium text-[#181945] opacity-60 lg:w-[70%] md:w-[80%] w-[90%] mt-2">
+                        At Pocketpay, we believe businesses shouldn't have to wait or pay to access money they've
+                        already
+                        earned. We don't charge you to sign up. We don't charge you when you receive payments. And
+                        we
+                        don't
+                        charge you when you make payments. There are zero fees. Seriously.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="lg:mt-8 md:mt-7 mt-6 ">
+                <button
+                    class="w-full text-left lg:text-2xl md:text-xl text-lg font-bold text-[#3B3E44] flex justify-between items-center py-2 border-b"
+                    onclick="toggleFaq(2)">
+                    Does Pocketpay replace my accounting software?
+                    <div
+                        class="h-8 w-8 bg-[#0666EB] flex justify-center transform transition-transform rounded-full text-white ">
+
+                        <span id="icon-2" class=" ">+</span>
+                    </div>
+                </button>
+                <div id="answer-2" class="hidden">
+                    <p
+                        class="lg:text-lg md:text-base text-sm font-medium text-[#181945] opacity-60 lg:w-[70%] md:w-[80%] w-[90%] mt-2">
+                        At Pocketpay, we believe businesses shouldn't have to wait or pay to access money they've
+                        already
+                        earned. We don't charge you to sign up. We don't charge you when you receive payments. And
+                        we
+                        don't
+                        charge you when you make payments. There are zero fees. Seriously.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="lg:mt-8 md:mt-7 mt-6 ">
+                <button
+                    class="w-full text-left lg:text-2xl md:text-xl text-lg font-bold text-[#3B3E44] flex justify-between items-center py-2 border-b"
+                    onclick="toggleFaq(3)">
+                    Is Pocketpay a bank?
+                    <div
+                        class="h-8 w-8 bg-[#0666EB] flex justify-center transform transition-transform rounded-full text-white ">
+
+                        <span id="icon-3" class=" ">+</span>
+                    </div>
+                </button>
+                <div id="answer-3" class="hidden">
+                    <p
+                        class="lg:text-lg md:text-base text-sm font-medium text-[#181945] opacity-60 lg:w-[70%] md:w-[80%] w-[90%] mt-2">
+                        At Pocketpay, we believe businesses shouldn't have to wait or pay to access money they've
+                        already
+                        earned. We don't charge you to sign up. We don't charge you when you receive payments. And
+                        we
+                        don't
+                        charge you when you make payments. There are zero fees. Seriously.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="lg:mt-8 md:mt-7 mt-6 ">
+                <button
+                    class="w-full text-left lg:text-2xl md:text-xl text-lg font-bold text-[#3B3E44] flex justify-between items-center py-2 border-b"
+                    onclick="toggleFaq(4)">
+                    Are the payments really instant?
+                    <div
+                        class="h-8 w-8 bg-[#0666EB] flex justify-center transform transition-transform rounded-full text-white ">
+
+                        <span id="icon-4" class=" ">+</span>
+                    </div>
+                </button>
+                <div id="answer-4" class="hidden">
+                    <p
+                        class="lg:text-lg md:text-base text-sm font-medium text-[#181945] opacity-60 lg:w-[70%] md:w-[80%] w-[90%] mt-2">
+                        At Pocketpay, we believe businesses shouldn't have to wait or pay to access money they've
+                        already
+                        earned. We don't charge you to sign up. We don't charge you when you receive payments. And
+                        we
+                        don't
+                        charge you when you make payments. There are zero fees. Seriously.
+                    </p>
+                </div>
+            </div>
+            <hr>
+            <div class="lg:mt-8 md:mt-7 mt-6 ">
+                <button
+                    class="w-full text-left lg:text-2xl md:text-xl text-lg font-bold text-[#3B3E44] flex justify-between items-center py-2 border-b"
+                    onclick="toggleFaq(5)">
+                    Do my clients and vendors have to sign up for Pocketpay too?
+                    <div
+                        class="h-8 w-8 bg-[#0666EB] flex justify-center transform transition-transform rounded-full text-white ">
+
+                        <span id="icon-5" class=" ">+</span>
+                    </div>
+                </button>
+                <div id="answer-5" class="hidden">
+                    <p
+                        class="lg:text-lg md:text-base text-sm font-medium text-[#181945] opacity-60 lg:w-[70%] md:w-[80%] w-[90%] mt-2">
+                        At Pocketpay, we believe businesses shouldn't have to wait or pay to access money they've
+                        already
+                        earned. We don't charge you to sign up. We don't charge you when you receive payments. And
+                        we
+                        don't
+                        charge you when you make payments. There are zero fees. Seriously.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="flex justify-center py-[80px] bg-[#E6F0FD] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-2 grid-cols-1 gap-5">
+            <div>
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] w-[80%] wow animate__animated animate__fadeInLeft">Connect With Our Sales
+                    Team.</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60 wow animate__animated animate__fadeInLeft">Our sales team always
+                    active to
+                    support you. Any kind of questions about to our product they can answer to you.
+                </p>
+                <form action="#" class="mt-14 wow animate__animated animate__zoomIn">
+                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-8" data-aos="fade-down" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        <input type="text" placeholder="First Name"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                        <input type="text" placeholder="Last Name"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-8 my-8" data-aos="fade-down" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        <input type="text" placeholder="Email Address"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                        <input type="text" placeholder="Phone"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                    </div>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Text" data-aos="fade-down"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800"
+                        class="w-full border border-white p-3 rounded-lg mt-1 hover:border-[#0666EB] focus:outline-none focus:border-blue-500"
+                        required></textarea>
+                    <label class="inline-flex items-center gap-3 mt-8" data-aos="zoom-in" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 opacity-40 border-none">
+                        <span class="text-[#8C94A3] text-lg font-normal w-[80%] ">I agree that braintree may contact me
+                            at the email address or
+                            phone number above.</span>
+                    </label>
+                    <button
+                        class="bg-[#0666EB] hover:bg-[#1A78F0] px-[16px] py-[9px] text-white rounded-full w-full text-lg font-semibold mt-8"
+                        data-aos="zoom-in" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        Submit
+                    </button>
+                </form>
+            </div>
+            <div class="wow animate__animated animate__slideInRight" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+                <img src="img/contact.png" alt="" class="w-full h-full">
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="flex justify-center sm:pt-[100px] pt-8 bg-[#032B63] sm:pb-[40px] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div>
+                <img src="img/logo-w.svg" alt="">
+                <p class="text-base font-normal mt-6 text-white leading-6 w-[70%]">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </p>
+                <div id="icons" class="grid grid-cols-7 gap-5 mt-9">
+                    <a href="#"><img src="img/insta.svg" alt=""></a>
+                    <a href="#"><img src="img/x.svg" alt=""></a>
+                    <a href="#"><img src="img/fb.svg" alt=""></a>
+                    <a href="#"><img src="img/youtube.svg" alt=""></a>
+                </div>
+
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Jump To</h4>
+                <a href="index.html">
+                    <p class="text-base font-normal mt-6">Home</p>
+                </a>
+                <a href="services.html">
+                    <p class="text-base font-normal mt-3">Services</p>
+                </a>
+                <a href="pricing.html">
+                    <p class="text-base font-normal mt-3">Pricing</p>
+                </a>
+                <a href="about.html">
+                    <p class="text-base font-normal mt-3">About us</p>
+                </a>
+                <a href="contact.html">
+                    <p class="text-base font-normal mt-3">Contact</p>
+                </a>
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Legal</h4>
+                <a href="privacyPolicy.html">
+                    <p class="text-base font-normal mt-6">Privacy Policy</p>
+                </a>
+                <a href="terms.html">
+                    <p class="text-base font-normal mt-3">Terms of Use</p>
+                </a>
+                <a href="blog.html">
+                    <p class="text-base font-normal mt-3">Blog</p>
+                </a>
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Contact Us</h4>
+
+                <div class="flex gap-4 mt-6">
+                    <img src="img/map-pin.svg" alt="">
+                    <p class="text-base font-normal">1234, South Avenue</p>
+                </div>
+                <div class="flex gap-4 mt-3">
+                    <img src="img/phone-call.svg" alt="">
+                    <p class="text-base font-normal">+01234 567 890</p>
+                </div>
+                <p class="flex gap-4 mt-6">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="lg:w-[112px] md:w-[80px] w-[90px]">
+                    <img src="img/appstore.png" alt="" class="lg:w-[112px] md:w-[80px] w-[90px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <Script src="js/wow.min.js"></Script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>

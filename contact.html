@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocketpay</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
+    <style>
+        * {
+            font-family: Urbanist;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <nav class="p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="font-[18px] font-normal hover:text-[#0666EB]">Home</a>
+                <a href="#" class="font-[18px] font-normal hover:text-[#0666EB]">Services</a>
+                <a href="#" class="font-[18px] font-normal hover:text-[#0666EB]">Pricing</a>
+                <a href="about.html" class="font-[18px] font-normal hover:text-[#0666EB]">About Us</a>
+                <a href="contact.html" class="font-[18px] font-normal hover:text-[#0666EB]">Contuct</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Log In</p>
+                    </a>
+                </div>
+                <div id="regi" class="bg-[#0666EB] hover:bg-[#1A78F0] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-10 md:hidden bg-[#E6F0FD] inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="" class="">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="#" class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="#" class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="font-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contuct</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <!-- <nav class="fixed top-0 left-0 right-0 z-50 p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="Logo" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="text-[18px] font-normal hover:text-[#0666EB]">Home</a>
+                <a href="#" class="text-[18px] font-normal hover:text-[#0666EB]">Services</a>
+                <a href="#" class="text-[18px] font-normal hover:text-[#0666EB]">Pricing</a>
+                <a href="about.html" class="text-[18px] font-normal hover:text-[#0666EB]">About Us</a>
+                <a href="contact.html" class="text-[18px] font-normal hover:text-[#0666EB]">Contact</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold hover:text-[#1A78F0]">Log In</p>
+                    </a>
+                </div>
+                <div id="regi" class="bg-[#0666EB] hover:bg-[#1A78F0] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="#">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-50 md:hidden bg-[#E6F0FD] inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="#" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contact</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="#">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <nav
+        class="fixed top-0 left-0 right-0 z-50 p-3 bg-[#E6F0FD] flex items-center justify-center lg:px-14 transition-colors duration-300 ease-in-out">
+        <div class="container flex justify-between items-center">
+            <a href="index.html" id="brand">
+                <img src="img/logo.svg" alt="Logo" class="">
+            </a>
+
+            <div id="nav-menu" class="hidden md:flex gap-7">
+                <a href="index.html" class="text-[18px] font-normal hover:text-[#0666EB]">Home</a>
+                <a href="services.html" class="text-[18px] font-normal hover:text-[#0666EB]">Services</a>
+                <a href="pricing.html" class="text-[18px] font-normal hover:text-[#0666EB]">Pricing</a>
+                <a href="about.html" class="text-[18px] font-normal hover:text-[#0666EB]">About Us</a>
+                <a href="contact.html" class="text-[18px] font-normal hover:text-[#0666EB]">Contact</a>
+            </div>
+
+            <div id="login" class="hidden md:flex gap-3 items-center">
+                <div id="logi">
+                    <a href="login.html">
+                        <p class="text-[14px] font-semibold hover:text-[#1A78F0]">Log In</p>
+                    </a>
+                </div>
+                <div id="regi"
+                    class="bg-[#0666EB] hover:bg-[#1A78F0] flex gap-2 px-[16px] py-[9px] text-white rounded-full">
+                    <a href="regi.html">
+                        <p class="text-[14px] font-semibold">Sign Up</p>
+                    </a>
+                    <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                </div>
+            </div>
+
+            <button class="p-2 md:hidden" onclick="handleMenu()">
+                <i class="fa-solid fa-bars text-gray-600"></i>
+            </button>
+
+            <div id="nav-dialog" class="hidden fixed z-50 md:hidden bg-white inset-0 p-3 max-h-max drop-shadow-xl">
+                <div id="nav-bar" class="flex justify-between">
+                    <a href="index.html" id="brand">
+                        <img src="img/logo.svg" alt="Logo">
+                    </a>
+                    <button class="p-2 md:hidden" onclick="handleMenu()">
+                        <i class="fa-solid fa-xmark text-gray-600"></i>
+                    </button>
+                </div>
+                <div class="mt-6">
+                    <a href="index.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Home</a>
+                    <a href="services.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Services</a>
+                    <a href="pricing.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Pricing</a>
+                    <a href="about.html" class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">About
+                        Us</a>
+                    <a href="contact.html"
+                        class="text-[18px] font-normal p-3 block rounded-lg hover:bg-[#C4D9F3]">Contact</a>
+                </div>
+                <div class="h-[1px] bg-gray-200"></div>
+                <div id="login" class="mt-3 gap-3 items-center">
+                    <div id="logi">
+                        <a href="login.html">
+                            <p class="text-[14px] font-semibold text-center">Log In</p>
+                        </a>
+                    </div>
+                    <div id="regi"
+                        class="bg-[#0666EB] mt-3 flex justify-center gap-2 px-[16px] py-[9px] text-white rounded-full">
+                        <a href="regi.html">
+                            <p class="text-[14px] font-semibold">Sign Up</p>
+                        </a>
+                        <img src="img/users-plus.svg" alt="Sign Up Icon" class="bg-black-700">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact" class="flex justify-center py-[120px] bg-white lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-2 grid-cols-1 gap-5">
+            <div class="wow animate__animated animate__lightSpeedInLeft" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1500">
+                <img src="img/contact-flip.png" alt="" class="w-full h-full">
+            </div>
+            <div class="wow animate__animated animate__lightSpeedInRight">
+                <h1 class="lg:text-5xl md:text-4xl text-3xl font-bold text-[#181945] w-[80%] wow animate__animated animate__backInDown" data-aos="fade-right"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">Connect With Our Sales
+                    Team.</h1>
+                <p class="text-lg font-medium mt-4 text-[#181945] opacity-60 wow animate__animated animate__fadeInDown" data-aos="fade-right"
+                    data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="1000">Our sales team always
+                    active to
+                    support you. Any kind of questions about to our product they can answer to you.
+                </p>
+                <form action="#" class="mt-14">
+                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-8" data-aos="fade-down" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        <input type="text" placeholder="First Name"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                        <input type="text" placeholder="Last Name"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                    </div>
+                    <div class="grid sm:grid-cols-2 grid-cols-1 gap-8 my-8" data-aos="fade-down" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        <input type="text" placeholder="Email Address"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                        <input type="text" placeholder="Phone"
+                            class="sm:p-4 p-2 rounded-md border hover:border-[#0666EB] focus:outline-none focus:border-blue-500">
+                    </div>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Text" data-aos="fade-down"
+                        data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800"
+                        class="w-full border border-gray-200 p-3 rounded-lg mt-1 hover:border-[#0666EB] focus:outline-none focus:border-blue-500"
+                        required></textarea>
+                    <label class="inline-flex items-center gap-3 mt-8" data-aos="zoom-in" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        <input type="checkbox" class="form-checkbox h-5 w-5 opacity-40 border-none">
+                        <span class="text-[#8C94A3] text-lg font-normal w-[80%] ">I agree that braintree may contact me
+                            at the email address or
+                            phone number above.</span>
+                    </label>
+                    <button
+                        class="bg-[#0666EB] px-[16px] py-[9px] text-white rounded-full w-full text-lg font-semibold mt-8"
+                        data-aos="zoom-in" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-duration="800">
+                        Submit
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section id="footer" class="flex justify-center sm:pt-[100px] pt-8 bg-[#032B63] sm:pb-[40px] lg:px-14 md:px-3">
+        <div class="container md:m-0 m-3 grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-5">
+            <div>
+                <img src="img/logo-w.svg" alt="">
+                <p class="text-base font-normal mt-6 text-white leading-6 w-[70%]">Lorem ipsum dolor sit amet,
+                    consectetur adipiscing elit.
+                </p>
+                <div id="icons" class="grid grid-cols-7 gap-5 mt-9">
+                    <a href="#"><img src="img/insta.svg" alt=""></a>
+                    <a href="#"><img src="img/x.svg" alt=""></a>
+                    <a href="#"><img src="img/fb.svg" alt=""></a>
+                    <a href="#"><img src="img/youtube.svg" alt=""></a>
+                </div>
+
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Jump To</h4>
+                <a href="index.html">
+                    <p class="text-base font-normal mt-6">Home</p>
+                </a>
+                <a href="services.html">
+                    <p class="text-base font-normal mt-3">Services</p>
+                </a>
+                <a href="pricing.html">
+                    <p class="text-base font-normal mt-3">Pricing</p>
+                </a>
+                <a href="about.html">
+                    <p class="text-base font-normal mt-3">About us</p>
+                </a>
+                <a href="contact.html">
+                    <p class="text-base font-normal mt-3">Contact</p>
+                </a>
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Legal</h4>
+                <a href="privacyPolicy.html">
+                    <p class="text-base font-normal mt-6">Privacy Policy</p>
+                </a>
+                <a href="terms.html">
+                    <p class="text-base font-normal mt-3">Terms of Use</p>
+                </a>
+                <a href="blog.html">
+                    <p class="text-base font-normal mt-3">Blog</p>
+                </a>
+            </div>
+            <div class="text-white sm:mt-0 mt-6">
+                <h4 class="text-[22px] font-bold">Contact Us</h4>
+
+                <div class="flex gap-4 mt-6">
+                    <img src="img/map-pin.svg" alt="">
+                    <p class="text-base font-normal">1234, South Avenue</p>
+                </div>
+                <div class="flex gap-4 mt-3">
+                    <img src="img/phone-call.svg" alt="">
+                    <p class="text-base font-normal">+01234 567 890</p>
+                </div>
+                <p class="flex gap-4 mt-6">Download Our App Now!</p>
+                <div class="flex gap-3 mt-2">
+                    <img src="img/playstore.png" alt="" class="lg:w-[112px] md:w-[80px] w-[90px]">
+                    <img src="img/appstore.png" alt="" class="lg:w-[112px] md:w-[80px] w-[90px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
+    <Script src="js/wow.min.js"></Script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
+</html>
